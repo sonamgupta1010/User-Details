@@ -1,0 +1,15 @@
+/* File: src/components/Input/Input.css */
+.custom-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  .error {
+    border-color: red; /* Change border color to red on error */
+  }
+  

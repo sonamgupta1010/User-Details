@@ -1,0 +1,15 @@
+/* File: src/components/RegistrationForm/RegistrationForm.css */
+.registration-form {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .error {
+    border: 1px solid red;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
+  

@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// File: src/App.js
+import React, { useState } from 'react';
+import RegistrationForm from './component/RegistrationForm';
+import UserData from './component/UserData/UserData';
 
-function App() {
+const App = () => {
+  const [submittedFormData, setSubmittedFormData] = useState([]);
+
+  const handleFormSubmit = (formData) => {
+    setSubmittedFormData([...submittedFormData, formData]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RegistrationForm onSubmit={handleFormSubmit} />
+      {submittedFormData.length > 0 && <UserData users={submittedFormData} />}
     </div>
   );
-}
+};
 
 export default App;
